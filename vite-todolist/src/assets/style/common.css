@@ -1,0 +1,41 @@
+body{
+    font-size: 1.2em;
+    background: #1c1c1c;
+    color: white;
+    text-align: center;
+}
+
+div.center{
+    text-align: center;
+}
+
+#todoContainer{
+    display : inline-block;
+    width: max-content;
+    text-align: left;
+}
+
+#labelTd{
+    width: 5vw;
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+tr{
+    border: 1px solid grey;
+    height: 6vh;
+}
+
+button{
+    background: inherit;
+    color: inherit;
+    border: none;
+    font-size: 0.7em;
+}
+
+button, input:not(input[type=text]){
+    cursor : pointer;
+}
+
