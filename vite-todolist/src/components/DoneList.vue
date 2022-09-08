@@ -26,10 +26,7 @@ export default {
         todos: Object.keys(localStorage).filter(key=>key!='number'&&JSON.parse(localStorage.getItem(key)).checked==true)
             .map(key=>JSON.parse(localStorage.getItem(key)))
             .sort(id=>id)
-    }),
-    aa : function(){
-        alert();
-    }
+    })
 }
 </script>
 
