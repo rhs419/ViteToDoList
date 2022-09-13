@@ -1,16 +1,5 @@
-.tdCheck{
-    text-align: center;
-}
-
-tbody#done, tbody#todo{
+tbody#todo{
     font-size: 0.7em;
 }
 
-.checked{
-    color: grey;
-    text-decoration-line: line-through;
-}
 
-input[type=checkbox].todo{
-    accent-color: grey;
-}

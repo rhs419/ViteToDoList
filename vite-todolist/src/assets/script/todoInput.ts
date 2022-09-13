@@ -1,12 +1,3 @@
-window.onload = ()=>{
-const toDoInput : HTMLInputElement | null = document.querySelector("#toDoInput");
-const addButton : HTMLButtonElement | null = document.querySelector("#addButton");
-    toDoInput!.addEventListener("focusin", adding);
-    toDoInput!.addEventListener("focusout", adding);
-    toDoInput!.addEventListener("keypress", Event => enter(Event));
-    addButton!.addEventListener("click", addToDo);
-}
-
 class ToDo{
     id : string;
     checked : boolean;
@@ -25,7 +16,7 @@ function enter(e : KeyboardEvent) : void{
     }
 }
 
-function adding() : void{
+export function adding() : void{
     const label : HTMLLabelElement | null = document.querySelector("#todoLabel");
     label!.innerText=="○"?label!.innerText="+":label!.innerText="○";
 }
@@ -43,7 +34,7 @@ function addToDoLS(text : string) : void{
     window.dispatchEvent(new Event('storage'));
 }
 
-function addToDo() : void{
+export function addToDo() : void{
     const toDoInput : HTMLInputElement | null = document.querySelector("#toDoInput");
     if(!(toDoInput!.value == null || toDoInput!.value.trim() == "")) {
         addToDoLS(toDoInput!.value);
