@@ -12,10 +12,10 @@ export default {
     name: "ToDoItem",
     methods: {
         toDoDone: function (e: Event){
-            toDoDone(e,this.todos);
+            toDoDone(e);
         },
         delToDoLS: function(e: Event){
-            delToDoLS(e,this.todos);
+            delToDoLS(e);
         }
     },
     props:{
@@ -34,11 +34,6 @@ export default {
             this.todos = Object.keys(localStorage).filter(key=>key!='number'&&JSON.parse(localStorage.getItem(key)!).checked==this.completed&&JSON.parse(localStorage.getItem(key)!).group==this.group)
                 .map(key=>JSON.parse(localStorage.getItem(key)!))
                 .sort(id=>id)
-        }
-    },
-    unmounted() {
-        for (const todo of this.todos) {
-            localStorage.setItem(todo.id,todo);
         }
     }
 }
