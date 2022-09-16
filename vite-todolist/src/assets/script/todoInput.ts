@@ -26,8 +26,8 @@ function addToDoLS(text : string) : void{
         localStorage.setItem("number", "0");
     }
     const number : string | null = localStorage.getItem("number");
-    const todo : ToDo = new ToDo("todo" + number, false, text);
-    localStorage.setItem(number,JSON.stringify(todo));
+    const todo : ToDo = new ToDo(number!, false, text);
+    localStorage.setItem(number!,JSON.stringify(todo));
     if(localStorage.getItem("number")!=null) {
         localStorage.setItem("number", ""+(parseInt(<string>localStorage.getItem("number"))+1));
     }

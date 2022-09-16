@@ -24,10 +24,9 @@ export default {
         todos: Array<Object>
     }),
     mounted() {
-        this.todos = Object.keys(localStorage).filter(key=>key!='number'&&JSON.parse(localStorage.getItem(key)!).checked==this.completed)
+        this.todos = Object.keys(localStorage).filter(key=>key!='number'&&JSON.parse(localStorage.getItem(key)).checked==this.completed)
             .map(key=>JSON.parse(localStorage.getItem(key)!))
             .sort(id=>id)
-        console.log(this.todos);
     }
 }
 </script>
