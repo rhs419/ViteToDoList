@@ -27,11 +27,10 @@ function addToDoLS(text : string) : void{
     }
     const number : string | null = localStorage.getItem("number");
     const todo : ToDo = new ToDo("todo" + number, false, text);
-    localStorage.setItem("todo" + number,JSON.stringify(todo));
+    localStorage.setItem(number,JSON.stringify(todo));
     if(localStorage.getItem("number")!=null) {
         localStorage.setItem("number", ""+(parseInt(<string>localStorage.getItem("number"))+1));
     }
-    window.dispatchEvent(new Event('storage'));
 }
 
 export function addToDo() : void{

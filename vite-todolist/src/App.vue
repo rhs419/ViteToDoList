@@ -3,8 +3,8 @@
     <form @submit="">
         <table id = "todoContainer">
             <ToDoInput/>
-            <ToDoList group="할일" todos="todos"/>
-            <ToDoList group="완료" todos="todos" completed/>
+            <ToDoList group="할일" />
+            <ToDoList group="완료" completed/>
         </table>
     </form>
 </template>
